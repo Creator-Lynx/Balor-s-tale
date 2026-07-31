@@ -3423,6 +3423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 770903229}
   - component: {fileID: 770903230}
+  - component: {fileID: 770903231}
   m_Layer: 0
   m_Name: Match
   m_TagString: Untagged
@@ -3459,7 +3460,7 @@ AudioSource:
   m_Resource: {fileID: 8300000, guid: b01db0cf9e6c43346b467edb8ee6eca0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.11
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -3542,6 +3543,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!168 &770903231
+AudioEchoFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770903228}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Delay: 529
+  m_DecayRatio: 0.02
+  m_WetMix: 0.04
+  m_DryMix: 0.91
 --- !u!1 &787483773
 GameObject:
   m_ObjectHideFlags: 0

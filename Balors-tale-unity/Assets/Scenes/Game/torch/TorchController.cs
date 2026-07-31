@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,6 +9,8 @@ public class TorchController : MonoBehaviour
 
     [SerializeField] AudioClip matchClip;
     [SerializeField] AudioSource matchAudioSource;
+    float basePitch;
+    [SerializeField] float matchAudioPitchRandomRange = 0.3f;
     [SerializeField] AudioSource burnupAudiosource;
 
     [SerializeField] float baseBurningTime = 10f;
@@ -18,6 +21,8 @@ public class TorchController : MonoBehaviour
     void Awake()
     {
         fireAction = InputSystem.actions.FindAction("Interact");
+        basePitch = matchAudioSource.pitch;
+        torchAnimator = GetComponent<Animator>();
     }
     int countToFire = 3;
     bool isFireUp = false;
@@ -43,15 +48,21 @@ public class TorchController : MonoBehaviour
     int count = 0;
     void Matching()
     {
+        if(count >= countToFire)
+        {
+            BurnUp();
+            return;
+        }
+        matchAudioSource.pitch = basePitch + Random.Range(0f, matchAudioPitchRandomRange);
         matchAudioSource.PlayOneShot(matchClip);
         //vfx
         count++;
-        
     }
 
     void BurnUp()
     {
         count = 0;
+        isFireUp = true;
         torchAnimator.SetBool("IsLight", true);
         burnupAudiosource.Play();
         StartCoroutine(BurnTime());
