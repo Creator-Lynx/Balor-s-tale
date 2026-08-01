@@ -16,6 +16,8 @@ public class TorchController : MonoBehaviour
     [SerializeField] float baseBurningTime = 10f;
     [SerializeField] float randomBurningTime = 5f;
 
+    [SerializeField] float matchingDelay = 0.5f;
+
     Animator torchAnimator;
 
     void Awake()
@@ -26,9 +28,11 @@ public class TorchController : MonoBehaviour
     }
     int countToFire = 3;
     bool isFireUp = false;
+    bool isOnMatchingDelay = false;
     void Update()
     {
         if(!isFireUp)
+        if(!isOnMatchingDelay)
         if(fireAction.WasPressedThisFrame())
         {
             Matching();
@@ -57,6 +61,13 @@ public class TorchController : MonoBehaviour
         matchAudioSource.PlayOneShot(matchClip);
         //vfx
         count++;
+        StartCoroutine(MatchingDelay());
+    }
+    IEnumerator MatchingDelay()
+    {
+        isOnMatchingDelay = true;
+        yield return new WaitForSeconds(matchingDelay);
+        isOnMatchingDelay = false;
     }
 
     void BurnUp()
