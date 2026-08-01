@@ -9720,6 +9720,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PLAYERstranger
       objectReference: {fileID: 0}
+    - target: {fileID: 6210577707564028456, guid: 318b66db125cc4847a53101b8640fc93, type: 3}
+      propertyPath: m_Name
+      value: BaseLight
+      objectReference: {fileID: 0}
     - target: {fileID: 6841367128175856188, guid: 318b66db125cc4847a53101b8640fc93, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16
