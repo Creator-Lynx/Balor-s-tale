@@ -19,6 +19,7 @@ public class TorchController : MonoBehaviour
     [SerializeField] float matchingDelay = 0.5f;
 
     Animator torchAnimator;
+    [SerializeField] ParticleSystem igniSparks;
 
     void Awake()
     {
@@ -52,6 +53,7 @@ public class TorchController : MonoBehaviour
     int count = 0;
     void Matching()
     {
+        igniSparks.Play();
         if(count >= countToFire)
         {
             BurnUp();
