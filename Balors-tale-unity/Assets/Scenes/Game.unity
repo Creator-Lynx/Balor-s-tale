@@ -9379,10 +9379,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1630022795538147052, guid: 318b66db125cc4847a53101b8640fc93, type: 3}
-      propertyPath: m_Animations.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3401856650711284278, guid: 318b66db125cc4847a53101b8640fc93, type: 3}
       propertyPath: m_Name
       value: PLAYERstranger
