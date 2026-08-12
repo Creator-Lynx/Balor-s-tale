@@ -20,6 +20,7 @@ public class TorchController : MonoBehaviour
 
     Animator torchAnimator;
     [SerializeField] ParticleSystem igniSparks;
+    [SerializeField] Animation sparksLightAnimation;
 
     void Awake()
     {
@@ -61,8 +62,12 @@ public class TorchController : MonoBehaviour
         }
         matchAudioSource.pitch = basePitch + Random.Range(0f, matchAudioPitchRandomRange);
         matchAudioSource.PlayOneShot(matchClip);
-        //vfx
+
+        sparksLightAnimation.Stop();
+        sparksLightAnimation.Play();
+
         count++;
+
         StartCoroutine(MatchingDelay());
     }
     IEnumerator MatchingDelay()

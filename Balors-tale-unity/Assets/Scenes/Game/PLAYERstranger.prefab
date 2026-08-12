@@ -134,6 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1866526661116862538}
   - component: {fileID: 7226867719043231627}
+  - component: {fileID: 1630022795538147052}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -163,11 +164,11 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2320614928923940715}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.9811321, g: 0.69607395, b: 0.49519405, a: 1}
-  m_Intensity: 3.46
+  m_Intensity: 0
   m_Range: 14.93
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -221,6 +222,23 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!111 &1630022795538147052
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320614928923940715}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 04cf411e0ff601845bda598e6f72916c, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 04cf411e0ff601845bda598e6f72916c, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &2737512303957810011
 GameObject:
   m_ObjectHideFlags: 0
@@ -5520,6 +5538,10 @@ PrefabInstance:
       value: 0.9811321
       objectReference: {fileID: 0}
     - target: {fileID: 719861983410174212, guid: 9889e6762722159438640efea7ae4118, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 719861983410174212, guid: 9889e6762722159438640efea7ae4118, type: 3}
       propertyPath: m_Intensity
       value: 4.81
       objectReference: {fileID: 0}
@@ -5663,3 +5685,4 @@ MonoBehaviour:
   randomBurningTime: 5
   matchingDelay: 0.5
   igniSparks: {fileID: 191905073454571716}
+  sparksLightAnimation: {fileID: 1630022795538147052}
