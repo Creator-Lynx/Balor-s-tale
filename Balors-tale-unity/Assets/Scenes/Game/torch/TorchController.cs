@@ -20,6 +20,8 @@ public class TorchController : MonoBehaviour
 
     Animator torchAnimator;
     [SerializeField] ParticleSystem igniSparks;
+    [SerializeField] ParticleSystem fire_main;
+    [SerializeField] ParticleSystem fire_burst;
     [SerializeField] Animation sparksLightAnimation;
 
     void Awake()
@@ -47,6 +49,7 @@ public class TorchController : MonoBehaviour
         yield return new WaitForSeconds (baseBurningTime + Random.Range(0f, randomBurningTime));
         isFireUp = false;
         torchAnimator.SetBool("IsLight", false);
+        fire_main.Stop();
         //sound burn down
         //ambient off
     }
@@ -82,6 +85,9 @@ public class TorchController : MonoBehaviour
         count = 0;
         isFireUp = true;
         torchAnimator.SetBool("IsLight", true);
+        fire_main.Play();
+        fire_burst.Stop();
+        fire_burst.Play();
         burnupAudiosource.Play();
         StartCoroutine(BurnTime());
     }

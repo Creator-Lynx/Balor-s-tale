@@ -5201,7 +5201,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -15213,7 +15213,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -20415,4 +20415,6 @@ MonoBehaviour:
   randomBurningTime: 5
   matchingDelay: 0.5
   igniSparks: {fileID: 191905073454571716}
+  fire_main: {fileID: 443218977582104040}
+  fire_burst: {fileID: 128698916289372534}
   sparksLightAnimation: {fileID: 1630022795538147052}
