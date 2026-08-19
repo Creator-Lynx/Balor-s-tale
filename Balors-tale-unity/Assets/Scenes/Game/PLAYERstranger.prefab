@@ -20093,7 +20093,7 @@ Transform:
   m_GameObject: {fileID: 7303190398689526983}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.09, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20262,7 +20262,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.45
+      scalar: 0.7
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -20433,8 +20433,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.62
-      minScalar: 0.7
+      scalar: 0.32
+      minScalar: 0.34
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -21016,7 +21016,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5.19
+      scalar: 10
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -21069,7 +21069,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 1.5
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -25231,4 +25231,5 @@ MonoBehaviour:
   igniSparks: {fileID: 191905073454571716}
   fire_main: {fileID: 443218977582104040}
   fire_burst: {fileID: 128698916289372534}
+  fire_smoke: {fileID: 8627069743047013071}
   sparksLightAnimation: {fileID: 1630022795538147052}
