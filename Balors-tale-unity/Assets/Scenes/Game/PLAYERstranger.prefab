@@ -20315,7 +20315,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.18
+      scalar: 1.06
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -21134,21 +21134,21 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0
           value: 0.3008423
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
+          inSlope: Infinity
+          outSlope: 1.4875864
+          tangentMode: 7
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.33333334
+          outWeight: 0.20211215
         - serializedVersion: 3
-          time: 0.69792247
-          value: 0.8551375
-          inSlope: 1.0098385
-          outSlope: 1.0098385
-          tangentMode: 0
+          time: 0.5380864
+          value: 0.79631394
+          inSlope: 0.3956108
+          outSlope: 0.41399494
+          tangentMode: 1
           weightedMode: 0
-          inWeight: 0.13065492
-          outWeight: 0.073235184
+          inWeight: 0.11394174
+          outWeight: 0.14710382
         - serializedVersion: 3
           time: 0.9849727
           value: 1
@@ -21481,9 +21481,9 @@ ParticleSystem:
         ctime7: 0
         atime0: 386
         atime1: 13685
-        atime2: 42405
+        atime2: 52235
         atime3: 65535
-        atime4: 0
+        atime4: 65535
         atime5: 0
         atime6: 0
         atime7: 0
@@ -21523,15 +21523,15 @@ ParticleSystem:
         m_NumAlphaKeys: 2
   UVModule:
     serializedVersion: 2
-    enabled: 0
+    enabled: 1
     mode: 0
     timeMode: 0
     fps: 30
     frameOverTime:
       serializedVersion: 2
-      minMaxState: 1
-      scalar: 0.9999
-      minScalar: 0.9999
+      minMaxState: 3
+      scalar: 0.75
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -21634,8 +21634,8 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     speedRange: {x: 0, y: 1}
-    tilesX: 1
-    tilesY: 1
+    tilesX: 2
+    tilesY: 2
     animationType: 0
     rowIndex: 0
     cycles: 1
