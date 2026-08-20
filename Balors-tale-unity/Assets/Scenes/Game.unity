@@ -907,7 +907,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 195538657}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 1025
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
@@ -6025,7 +6025,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1468191552}
   - component: {fileID: 1468191551}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
