@@ -13,6 +13,8 @@ public class TorchController : MonoBehaviour
     [SerializeField] float matchAudioPitchRandomRange = 0.3f;
     [SerializeField] AudioSource burnupAudiosource;
 
+    [SerializeField] AudioSource burningAudioSource;
+
     [SerializeField] float baseBurningTime = 10f;
     [SerializeField] float randomBurningTime = 5f;
 
@@ -52,6 +54,7 @@ public class TorchController : MonoBehaviour
         torchAnimator.SetBool("IsLight", false);
         fire_main.Stop(); 
         fire_smoke.Stop();
+        burningAudioSource.Stop();
         //sound burn down
         //ambient off
     }
@@ -92,6 +95,7 @@ public class TorchController : MonoBehaviour
         fire_burst.Stop();
         fire_burst.Play();
         burnupAudiosource.Play();
+        burningAudioSource.Play();
         StartCoroutine(BurnTime());
     }
 }
