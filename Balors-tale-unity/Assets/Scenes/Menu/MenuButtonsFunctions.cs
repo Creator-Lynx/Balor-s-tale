@@ -11,7 +11,7 @@ public class MenuButtonsFunctions : MonoBehaviour
         //async load gameintro
 
         // for test simple load intro scene
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Game0");
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
