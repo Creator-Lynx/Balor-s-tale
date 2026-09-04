@@ -14,6 +14,7 @@ public class InGameMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!PlayerControlsOnOff.InCutscene) //need to get a func for cutscene pause
         if(Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             if(stateMenu)
