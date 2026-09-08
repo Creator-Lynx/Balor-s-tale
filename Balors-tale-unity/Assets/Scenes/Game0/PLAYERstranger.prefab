@@ -25476,8 +25476,8 @@ MonoBehaviour:
   matchAudioPitchRandomRange: 0.3
   burnupAudiosource: {fileID: 3247796636219038575}
   burningAudioSource: {fileID: 2703888961289774905}
-  baseBurningTime: 15
-  randomBurningTime: 5
+  baseBurningTime: 45
+  randomBurningTime: 30
   matchingDelay: 0.5
   igniSparks: {fileID: 191905073454571716}
   fire_main: {fileID: 443218977582104040}
