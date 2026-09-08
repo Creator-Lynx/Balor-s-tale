@@ -14,25 +14,47 @@ public class InGameMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!PlayerControlsOnOff.InCutscene) //need to get a func for cutscene pause
+        //need to get a func for cutscene pause
         if(Keyboard.current.escapeKey.wasPressedThisFrame)
-        {
-            if(stateMenu)
+            if(!PlayerControlsOnOff.InCutscene)
             {
-                canvas.enabled = false;
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-                stateMenu = false;
-                InputActions.FindActionMap("Player").Enable();
+                if(stateMenu)
+                {
+                    canvas.enabled = false;
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.visible = false;
+                    stateMenu = false;
+                    Time.timeScale = 1;
+                }
+                else
+                {
+                    canvas.enabled = true;
+                    Cursor.lockState = CursorLockMode.Confined;
+                    Cursor.visible = true;
+                    stateMenu = true;
+                    Time.timeScale = 0;
+                }
             }
             else
             {
-                canvas.enabled = true;
-                Cursor.lockState = CursorLockMode.Confined;
-                Cursor.visible = true;
-                stateMenu = true;
-                InputActions.FindActionMap("Player").Disable();
+                if(stateMenu)
+                {
+                    canvas.enabled = false;
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.visible = false;
+                    stateMenu = false;
+                    InputActions.FindActionMap("Player").Enable();
+                    Time.timeScale = 1;
+                }
+                else
+                {
+                    canvas.enabled = true;
+                    Cursor.lockState = CursorLockMode.Confined;
+                    Cursor.visible = true;
+                    stateMenu = true;
+                    InputActions.FindActionMap("Player").Disable();
+                    Time.timeScale = 0;
+                }
             }
-        }
-    }
+    }       
 }

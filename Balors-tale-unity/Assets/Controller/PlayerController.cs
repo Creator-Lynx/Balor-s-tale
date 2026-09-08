@@ -73,6 +73,8 @@ public class PlayerController : MonoBehaviour
         else
             currentLookVector2 = lookVector2Input;
 
+        currentLookVector2 *= Time.timeScale;
+
         //player Y rotating
         float deltaRotationPlayerY = currentLookVector2.x * lookSpeed * globalLookSpeedModifier;
         transform.Rotate(deltaRotationPlayerY * Vector3.up);
