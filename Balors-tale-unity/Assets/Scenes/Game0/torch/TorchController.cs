@@ -49,14 +49,35 @@ public class TorchController : MonoBehaviour
 
     IEnumerator BurnTime()
     {
-        yield return new WaitForSeconds (baseBurningTime + Random.Range(0f, randomBurningTime));
+        float timer = baseBurningTime + Random.Range(0f, randomBurningTime);
+
+        while (timer > 0)
+        {
+            if (Time.timeScale <= 0)
+            {
+                yield return null;
+                continue;
+            }
+
+
+            if (PlayerControlsOnOff.InCutscene)
+            {
+                yield return null;
+                continue;
+            }
+
+            timer -= Time.deltaTime;
+            yield return null;
+        }
+
+
         isFireUp = false;
         torchAnimator.SetBool("IsLight", false);
         fire_main.Stop(); 
         fire_smoke.Stop();
-        burningAudioSource.Stop();
+        burningAudioSource.Stop();//ambient off
         //sound burn down
-        //ambient off
+        
     }
 
     int count = 0;
