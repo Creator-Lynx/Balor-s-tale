@@ -23,7 +23,8 @@ public class MenuButtonsFunctions : MonoBehaviour
         //async load gameintro
 
         // for test simple load intro scene
-        SceneManager.LoadScene("SplashScreen");
+        SceneManager.LoadScene(0);
+        //SceneManager.LoadScene("SplashScreen");
     }
 
     [SerializeField] GameObject settingsLayer;

@@ -1577,6 +1577,7 @@ GameObject:
   - component: {fileID: 241059125}
   - component: {fileID: 241059126}
   - component: {fileID: 241059127}
+  - component: {fileID: 241059128}
   m_Layer: 0
   m_Name: Cutscene0
   m_TagString: Untagged
@@ -1685,6 +1686,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControlsOnOff
   InputActions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
+--- !u!114 &241059128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241059123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405b9a9427664a84c9db1c5bfb583844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimelineWarmUp
 --- !u!1 &250324544
 GameObject:
   m_ObjectHideFlags: 0
