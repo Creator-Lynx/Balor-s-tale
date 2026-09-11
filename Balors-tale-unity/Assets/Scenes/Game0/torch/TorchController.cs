@@ -44,7 +44,6 @@ public class TorchController : MonoBehaviour
         {
             Matching();
         }
-
     }
 
     IEnumerator BurnTime()
@@ -118,5 +117,22 @@ public class TorchController : MonoBehaviour
         burnupAudiosource.Play();
         burningAudioSource.Play();
         StartCoroutine(BurnTime());
+    }
+
+
+    public void EndOfFire()
+    {
+        //method for the end of scene, when fire stop working before scene transition
+
+        //THERE IS NEED A SPECIAL SOUND!!! (in timeline)
+
+        StopAllCoroutines();
+        isOnMatchingDelay = true;
+        isFireUp = true;
+        torchAnimator.SetBool("IsLight", false);
+        fire_main.Stop(); 
+        fire_smoke.Stop();
+        burningAudioSource.Stop();//ambient off
+        //sound burn down
     }
 }
