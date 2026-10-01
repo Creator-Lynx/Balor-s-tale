@@ -11645,6 +11645,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PLAYERstranger
       objectReference: {fileID: 0}
+    - target: {fileID: 5025540055582720413, guid: 318b66db125cc4847a53101b8640fc93, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -2.4405384e-30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025540055582720413, guid: 318b66db125cc4847a53101b8640fc93, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 4.591775e-39
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025540055582720413, guid: 318b66db125cc4847a53101b8640fc93, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 2.2227777e-38
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025540055582720413, guid: 318b66db125cc4847a53101b8640fc93, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 9.1858e-41
+      objectReference: {fileID: 0}
     - target: {fileID: 6841367128175856188, guid: 318b66db125cc4847a53101b8640fc93, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16
