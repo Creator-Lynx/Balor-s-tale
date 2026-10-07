@@ -9343,7 +9343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 791494339}
   - component: {fileID: 791494338}
-  - component: {fileID: 791494337}
+  - component: {fileID: 791494340}
   m_Layer: 0
   m_Name: torch
   m_TagString: Untagged
@@ -9351,31 +9351,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &791494337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791494336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6538611d4f453e04fb2a9d091d5e41d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TorchController
-  matchClip: {fileID: 8300000, guid: b01db0cf9e6c43346b467edb8ee6eca0, type: 3}
-  matchAudioSource: {fileID: 0}
-  matchAudioPitchRandomRange: 0.3
-  burnupAudiosource: {fileID: 989698037}
-  burningAudioSource: {fileID: 870875074}
-  baseBurningTime: 45
-  randomBurningTime: 30
-  matchingDelay: 0.5
-  igniSparks: {fileID: 0}
-  fire_main: {fileID: 1873814973}
-  fire_burst: {fileID: 592477100}
-  fire_smoke: {fileID: 1160489248}
-  sparksLightAnimation: {fileID: 0}
 --- !u!95 &791494338
 Animator:
   serializedVersion: 7
@@ -9407,8 +9382,8 @@ Transform:
   m_GameObject: {fileID: 791494336}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.8511347, z: -0, w: 0.52494735}
-  m_LocalPosition: {x: 18.3, y: 2.427, z: -24.448}
-  m_LocalScale: {x: 1.2544453, y: 1.2544453, z: 1.2544453}
+  m_LocalPosition: {x: 18.926, y: 2.3771, z: -24.818}
+  m_LocalScale: {x: 1.7533381, y: 1.7533381, z: 1.7533381}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 331731748}
@@ -9417,6 +9392,23 @@ Transform:
   - {fileID: 1067587057}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -243.32901, z: 0}
+--- !u!114 &791494340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791494336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a2c34322ae9c74288c3705853dae04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnvironmentTorchController
+  burnupAudiosource: {fileID: 989698037}
+  burningAudioSource: {fileID: 870875074}
+  fire_main: {fileID: 1873814973}
+  fire_burst: {fileID: 592477100}
+  fire_smoke: {fileID: 1160489248}
 --- !u!1001 &795633491
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9708,7 +9700,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: c68ee343933b1864c96e65b33ada1682, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.789
+  m_Volume: 0.431
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9787,17 +9779,8 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 0.31811988
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
       time: 0.9583948
-      value: 1.0219468
+      value: 1
       inSlope: 0.78080845
       outSlope: 0.78080845
       tangentMode: 0
@@ -10765,10 +10748,22 @@ MonoBehaviour:
   OnTrigger:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 241059125}
-        m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 791494340}
+        m_TargetAssemblyTypeName: EnvironmentTorchController, Assembly-CSharp
+        m_MethodName: BurnUp
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1026884749}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -26741,9 +26736,9 @@ Light:
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0
-    m_NormalBias: 0.162
-    m_NearPlane: 0.48
+    m_Bias: 0.015
+    m_NormalBias: 0.224
+    m_NearPlane: 1
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
