@@ -5235,7 +5235,7 @@ Transform:
   m_GameObject: {fileID: 1270292995555794510}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.309, y: 0.1, z: -1.067}
+  m_LocalPosition: {x: -0.315, y: 0.1, z: -1.023}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10561,7 +10561,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3401856650711284278}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.99765563, z: -0, w: -0.06843484}
+  m_LocalRotation: {x: 0, y: 0.99765575, z: -0, w: -0.068433136}
   m_LocalPosition: {x: -16, y: 0, z: 26.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15717,6 +15717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6828856756883315312}
   - component: {fileID: 5025540055582720413}
+  - component: {fileID: 2956386455573509677}
   m_Layer: 0
   m_Name: BaseLight
   m_TagString: Untagged
@@ -15733,7 +15734,7 @@ Transform:
   m_GameObject: {fileID: 6210577707564028456}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0011591911, y: 0, z: -0.0036623478}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15795,7 +15796,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 4.591775e-39, y: 2.2227777e-38, z: 9.1858e-41, w: -2.4405384e-30}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -15804,6 +15805,23 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &2956386455573509677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6210577707564028456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f91941b6b9cd186449892aa7f92123dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TorchLightDancer
+  positionOffsetRange: 0.15
+  positionSpeed: 4
+  baseIntensity: 4.81
+  intensityVariance: 0.1
+  intensitySpeed: 8
 --- !u!1 &6420300138045867463
 GameObject:
   m_ObjectHideFlags: 0
