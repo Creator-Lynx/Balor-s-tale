@@ -10700,6 +10700,7 @@ MonoBehaviour:
   fire_burst: {fileID: 128698916289372534}
   fire_smoke: {fileID: 8627069743047013071}
   sparksLightAnimation: {fileID: 1630022795538147052}
+  playerInteract: {fileID: 8774042399124643733}
 --- !u!1 &3834374538940238904
 GameObject:
   m_ObjectHideFlags: 0
@@ -15822,6 +15823,63 @@ MonoBehaviour:
   baseIntensity: 4.81
   intensityVariance: 0.1
   intensitySpeed: 8
+--- !u!1 &6211187192810061147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1586417165433383818}
+  - component: {fileID: 8774042399124643733}
+  m_Layer: 0
+  m_Name: InteractionRaycaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1586417165433383818
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6211187192810061147}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5093296967048471750}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8774042399124643733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6211187192810061147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f18c1c60f0fff62479ddc76e4520edc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractController
+  rayCastDistance: 3
+  interactiveLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  OnInteractionReady:
+    m_PersistentCalls:
+      m_Calls: []
+  OnInteractionProceed:
+    m_PersistentCalls:
+      m_Calls: []
+  OnInteractionNotReady:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6420300138045867463
 GameObject:
   m_ObjectHideFlags: 0
@@ -15854,6 +15912,7 @@ Transform:
   m_Children:
   - {fileID: 5079879566646602778}
   - {fileID: 476354401061255140}
+  - {fileID: 1586417165433383818}
   m_Father: {fileID: 1062269936372357687}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &791182586860999526

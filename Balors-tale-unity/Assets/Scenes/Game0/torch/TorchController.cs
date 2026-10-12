@@ -27,6 +27,8 @@ public class TorchController : MonoBehaviour
     [SerializeField] ParticleSystem fire_smoke;
     [SerializeField] Animation sparksLightAnimation;
 
+
+    [SerializeField] PlayerInteractController playerInteract;
     void Awake()
     {
         fireAction = InputSystem.actions.FindAction("Interact");
@@ -44,6 +46,9 @@ public class TorchController : MonoBehaviour
         {
             Matching();
         }
+
+        if(isFireUp)
+        if(fireAction.WasPressedThisFrame()) playerInteract.Interact();
     }
 
     IEnumerator BurnTime()
