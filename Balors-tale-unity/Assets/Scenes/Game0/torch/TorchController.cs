@@ -140,4 +140,21 @@ public class TorchController : MonoBehaviour
         burningAudioSource.Stop();//ambient off
         //sound burn down
     }
+
+
+
+    public void AnimateTorchReadyToInteract()
+    {
+        torchAnimator.SetBool("ReadyToInteract", true);
+    }
+
+    public void AnimateTorchNotReadyToInteract()
+    {
+        torchAnimator.SetBool("ReadyToInteract", false);
+    }
+
+    public void AnimateTorchInteract()
+    {
+        torchAnimator.SetTrigger("Interaction");
+    }
 }
