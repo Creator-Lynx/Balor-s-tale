@@ -2082,6 +2082,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: ef29bdbbad82d474aa20f20680c31902, type: 2}
     - {fileID: 11400000, guid: 4feb6fea2982d4340af032f360443400, type: 2}
     - {fileID: 11400000, guid: f6c5b0723e35f884e9d2614d3179da57, type: 2}
+    - {fileID: 11400000, guid: abf0bf1bc9fb4e74eac11de6d9577cc7, type: 2}
+    - {fileID: 11400000, guid: 85e59b1c58f49384ab4bc8d679164f44, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -2116,6 +2118,34 @@ MonoBehaviour:
         - m_Target: {fileID: 6691948950348006790}
           m_TargetAssemblyTypeName: TorchController, Assembly-CSharp
           m_MethodName: EndOfFire
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1946661318}
+          m_TargetAssemblyTypeName: NextGameSceneLoader, Assembly-CSharp
+          m_MethodName: PreLoadScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1946661318}
+          m_TargetAssemblyTypeName: NextGameSceneLoader, Assembly-CSharp
+          m_MethodName: StartScene
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -10839,6 +10869,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928913938}
   m_CullTransparentMesh: 1
+--- !u!1 &1946661317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1946661319}
+  - component: {fileID: 1946661318}
+  m_Layer: 0
+  m_Name: SceneLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1946661318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946661317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce2bc949285b16145aafdd2f76a870fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NextGameSceneLoader
+--- !u!4 &1946661319
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946661317}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.36592, y: 1.54852, z: 26.04244}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1952471196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11909,3 +11983,4 @@ SceneRoots:
   - {fileID: 1850161412}
   - {fileID: 784606964}
   - {fileID: 1064753225}
+  - {fileID: 1946661319}
