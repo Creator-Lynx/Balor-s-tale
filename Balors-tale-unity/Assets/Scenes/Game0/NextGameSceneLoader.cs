@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class NextGameSceneLoader : MonoBehaviour
 {
-    string sceneName = "Game0";
+    string sceneName = "Game1";
     AsyncOperation asyncOperation;
     public void PreLoadScene()
     {
