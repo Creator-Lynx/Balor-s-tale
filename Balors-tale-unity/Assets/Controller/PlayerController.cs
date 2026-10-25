@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     public static float globalLookSpeedModifier = 1f;
     public static bool enableMouseSmoothing = true;
     [SerializeField] float lookSmoothing = 0.005f;
-    public static float globalLookSmoothingModifier = 1f;
+    //public static float globalLookSmoothingModifier = 1f;
 
     [Header("Player Movement Settings (GD only)")]
     [SerializeField] float movementSpeed = 5f;

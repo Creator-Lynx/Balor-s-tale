@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections;
 
-[RequireComponent(typeof(CharacterController))]
+
 public class RestrictedCameraController : MonoBehaviour
 {
 
@@ -16,14 +15,12 @@ public class RestrictedCameraController : MonoBehaviour
     [SerializeField] Transform cameraTransform;
 
     
-    [Header("Player Look Settings (global)")]
+    [Header("Player Look Settings")]
     [SerializeField] float lookSpeed = 0.1f;
-    public static float globalLookSpeedModifier = 1f;
     public static bool enableMouseSmoothing = true;
     [SerializeField] float lookSmoothing = 0.005f;
-    public static float globalLookSmoothingModifier = 1f;
-
- 
+    [SerializeField] float restrictionXAngle = 90f;
+    [SerializeField] float restrictionYAngle = 90f;
 
 
 
@@ -53,16 +50,16 @@ public class RestrictedCameraController : MonoBehaviour
         currentLookVector2 *= Time.timeScale;
 
         //player Y rotating
-        float deltaRotationPlayerY = currentLookVector2.x * lookSpeed * globalLookSpeedModifier;
+        float deltaRotationPlayerY = currentLookVector2.x * lookSpeed * PlayerController.globalLookSpeedModifier;
         //transform.Rotate(deltaRotationPlayerY * Vector3.up);
-        cameraCurrentRotationY -= deltaRotationPlayerY;
-        cameraCurrentRotationY = Mathf.Clamp(cameraCurrentRotationY, -90f, 90f);
+        cameraCurrentRotationY += deltaRotationPlayerY;
+        cameraCurrentRotationY = Mathf.Clamp(cameraCurrentRotationY, -restrictionYAngle, restrictionYAngle);
 
         //camera X rotating. get the delta
-        float deltaRotationCameraX = currentLookVector2.y * lookSpeed * globalLookSpeedModifier;
+        float deltaRotationCameraX = currentLookVector2.y * lookSpeed * PlayerController.globalLookSpeedModifier;
         //camera vertical clamping
         cameraCurrentRotationX -= deltaRotationCameraX;
-        cameraCurrentRotationX = Mathf.Clamp(cameraCurrentRotationX, -90f, 90f);
+        cameraCurrentRotationX = Mathf.Clamp(cameraCurrentRotationX, -restrictionXAngle, restrictionXAngle);
 
         
         //apply rotation

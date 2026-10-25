@@ -6349,6 +6349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2118365993}
   - component: {fileID: 2118365992}
+  - component: {fileID: 2118365994}
   m_Layer: 0
   m_Name: CinemachineCamera
   m_TagString: Untagged
@@ -6414,6 +6415,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2118365994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118365991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15787041c0a8a63479a9e73aa42f6345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RestrictedCameraController
+  cameraTransform: {fileID: 2118365993}
+  lookSpeed: 0.07
+  lookSmoothing: 0.04
+  restrictionXAngle: 45
+  restrictionYAngle: 45
 --- !u!1001 &2118958737
 PrefabInstance:
   m_ObjectHideFlags: 0
