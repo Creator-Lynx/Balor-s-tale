@@ -1129,6 +1129,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265964126}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &271000892 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3401856650711284278, guid: b1d965ba7b6e1234b9361dbc87609a6f, type: 3}
+  m_PrefabInstance: {fileID: 5051016437163107462}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &273192755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4499,7 +4504,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 47.676437
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -4525,8 +4530,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283319693}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 3.12, z: 3.16}
+  m_LocalRotation: {x: 0, y: -0.012880065, z: 0, w: -0.9999171}
+  m_LocalPosition: {x: 0.58397007, y: 2.0566847, z: 3.376666}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4563,7 +4568,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  CustomBlends: {fileID: 0}
+  CustomBlends: {fileID: 11400000, guid: 55c925ef272f8a149940bb89ff1773b7, type: 2}
 --- !u!114 &1283319698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7202,6 +7207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1881485683}
+  - component: {fileID: 1881485684}
   m_Layer: 0
   m_Name: IntroGameController
   m_TagString: Untagged
@@ -7218,12 +7224,26 @@ Transform:
   m_GameObject: {fileID: 1881485682}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.94903, y: 2.95692, z: 3.99668}
+  m_LocalPosition: {x: 0.39, y: 2.95692, z: 0.779}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1881485684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881485682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b75eb1e008a177e47bfe08a2f522eb22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChainRestrictedPlayerController
+  mainPlayer: {fileID: 271000892}
+  restrictedCamera: {fileID: 2118365991}
 --- !u!1 &1896855693
 GameObject:
   m_ObjectHideFlags: 0
@@ -7980,7 +8000,7 @@ GameObject:
   - component: {fileID: 2118365992}
   - component: {fileID: 2118365994}
   m_Layer: 0
-  m_Name: CinemachineCamera
+  m_Name: RestrictedCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
