@@ -319,6 +319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 34583009}
+  - component: {fileID: 34583010}
   m_Layer: 0
   m_Name: RestrictedCameraContainer
   m_TagString: Untagged
@@ -342,6 +343,28 @@ Transform:
   - {fileID: 2118365993}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &34583010
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34583008}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3a1cd23ac959017499c4c509f4e9ef33, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &52550062 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6323040758831401916, guid: b0e4bd9a19b95d8438beb009976fd1de, type: 3}
@@ -6393,8 +6416,8 @@ Transform:
   m_GameObject: {fileID: 1621559838}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 1.02, z: 0.87}
-  m_LocalScale: {x: 2.0905602, y: 1.3115317, z: 0.43226683}
+  m_LocalPosition: {x: -0.06, y: 0.757, z: 0.87}
+  m_LocalScale: {x: 2.0905602, y: 1.9970356, z: 0.43226683}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 134647520}
@@ -7277,6 +7300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChainRestrictedPlayerController
   mainPlayer: {fileID: 271000892}
   restrictedCamera: {fileID: 2118365991}
+  delayBetweenInput: 1.2
   countToChainBreak: 8
 --- !u!1 &1896855693
 GameObject:
