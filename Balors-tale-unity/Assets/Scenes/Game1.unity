@@ -7302,6 +7302,7 @@ MonoBehaviour:
   restrictedCamera: {fileID: 2118365991}
   delayBetweenInput: 1.2
   countToChainBreak: 8
+  restrictedCameraAnimator: {fileID: 34583010}
 --- !u!1 &1896855693
 GameObject:
   m_ObjectHideFlags: 0

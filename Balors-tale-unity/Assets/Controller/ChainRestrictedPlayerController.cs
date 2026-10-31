@@ -38,8 +38,16 @@ public class ChainRestrictedPlayerController : MonoBehaviour
         count++;
 
         //Make sound
-        //Debug.Log("Breaking chains" + count);
-        //Make animation
+        
+        //Make animation --- done
+        if(Random.Range(0, 2) == 0)
+        {
+            restrictedCameraAnimator.SetTrigger("TriggerShake1");
+        }
+        else
+        {
+            restrictedCameraAnimator.SetTrigger("TriggerShake2");
+        }
 
         if(count >= countToChainBreak)
         {
@@ -48,6 +56,9 @@ public class ChainRestrictedPlayerController : MonoBehaviour
             ChangeControllsToPlayer();
         }
     } 
+    [Space(30)]
+    [Header("Visuals")]
+    [SerializeField] Animator restrictedCameraAnimator;
 
     IEnumerator ChainBreakingDelay()
     {
@@ -58,7 +69,8 @@ public class ChainRestrictedPlayerController : MonoBehaviour
 
     void PerformChainBreak()
     {
-       
+       //Animate chain falling
+       //sound of a chain breaking
     }
     void ChangeControllsToPlayer()
     {
