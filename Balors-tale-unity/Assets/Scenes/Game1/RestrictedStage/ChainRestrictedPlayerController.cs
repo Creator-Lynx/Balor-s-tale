@@ -6,6 +6,7 @@ public class ChainRestrictedPlayerController : MonoBehaviour
 {
     [SerializeField] GameObject mainPlayer;
     [SerializeField] GameObject restrictedCamera;
+    [SerializeField] ChainSoundRandomizer chainSoundRandomizer;
 
     InputAction interact;
 
@@ -37,7 +38,8 @@ public class ChainRestrictedPlayerController : MonoBehaviour
     {
         count++;
 
-        //Make sound
+        //Make sound --- done
+        chainSoundRandomizer.Play();
         
         //Make animation --- done
         if(Random.Range(0, 2) == 0)

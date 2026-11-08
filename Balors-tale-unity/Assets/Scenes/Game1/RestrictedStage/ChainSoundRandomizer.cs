@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class ChainSoundRandomizer : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip[] audioClips;
+
+    [SerializeField] float pitchRandomRange = 0.15f;
+
+    public void Play()
     {
-        
+        audioSource.pitch = 1 + Random.Range(-pitchRandomRange, pitchRandomRange);
+        audioSource.PlayOneShot( audioClips[Random.Range(0, audioClips.Length) ]);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
