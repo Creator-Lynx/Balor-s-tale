@@ -8421,10 +8421,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PLAYER_Balor
       objectReference: {fileID: 0}
-    - target: {fileID: 3401856650711284278, guid: b1d965ba7b6e1234b9361dbc87609a6f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6841367128175856188, guid: b1d965ba7b6e1234b9361dbc87609a6f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.58397007
