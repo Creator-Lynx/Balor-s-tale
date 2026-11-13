@@ -779,6 +779,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 134647520}
+  - component: {fileID: 134647521}
   m_Layer: 0
   m_Name: ironDeva
   m_TagString: Untagged
@@ -816,6 +817,28 @@ Transform:
   - {fileID: 1613371487}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &134647521
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134647519}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &136881470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2259,6 +2282,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6323040758831401916, guid: b0e4bd9a19b95d8438beb009976fd1de, type: 3}
   m_PrefabInstance: {fileID: 2026859112}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &502069068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 502069070}
+  - component: {fileID: 502069069}
+  m_Layer: 0
+  m_Name: EndOfRestrictedFaseTimeline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &502069069
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502069068}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: b9642750f1783e946866503c081d60f3, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -7255202448261514002, guid: b9642750f1783e946866503c081d60f3, type: 2}
+    value: {fileID: 134647521}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &502069070
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502069068}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.543, y: 2.242, z: 3.139}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &506320087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8483,4 +8557,5 @@ SceneRoots:
   - {fileID: 1881485683}
   - {fileID: 34583009}
   - {fileID: 1792901289}
+  - {fileID: 502069070}
   - {fileID: 70785206}
