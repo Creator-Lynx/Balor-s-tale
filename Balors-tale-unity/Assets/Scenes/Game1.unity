@@ -2309,13 +2309,15 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: b9642750f1783e946866503c081d60f3, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: -7255202448261514002, guid: b9642750f1783e946866503c081d60f3, type: 2}
     value: {fileID: 134647521}
+  - key: {fileID: 5740142687845164086, guid: b9642750f1783e946866503c081d60f3, type: 2}
+    value: {fileID: 34583010}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &502069070
@@ -4696,7 +4698,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 51.8
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -8375,7 +8377,7 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
-    FieldOfView: 60.000004
+    FieldOfView: 51.8
     OrthographicSize: 5
     NearClipPlane: 0.01
     FarClipPlane: 1000
