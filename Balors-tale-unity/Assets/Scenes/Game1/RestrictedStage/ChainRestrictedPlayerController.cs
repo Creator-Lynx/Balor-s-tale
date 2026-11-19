@@ -83,7 +83,7 @@ public class ChainRestrictedPlayerController : MonoBehaviour
     }
 
     //calls by playable director
-    void ChangeControllsToPlayer()
+    public void ChangeControllsToPlayer()
     {
         mainPlayer.SetActive(true);
         restrictedCamera.SetActive(false);
