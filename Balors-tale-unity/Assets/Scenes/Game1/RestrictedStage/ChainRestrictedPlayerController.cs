@@ -1,12 +1,14 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Playables;
 
 public class ChainRestrictedPlayerController : MonoBehaviour
 {
     [SerializeField] GameObject mainPlayer;
     [SerializeField] GameObject restrictedCamera;
     [SerializeField] ChainSoundRandomizer chainSoundRandomizer;
+    [SerializeField] PlayableDirector endOfRestrictedStageCutscene;
 
     InputAction interact;
 
@@ -38,6 +40,14 @@ public class ChainRestrictedPlayerController : MonoBehaviour
     {
         count++;
 
+        if(count >= countToChainBreak)
+        {
+            PerformChainBreak();
+            //tmp just change controlls
+            //ChangeControllsToPlayer();
+            return;
+        }
+
         //Make sound --- done
         chainSoundRandomizer.Play();
         
@@ -50,14 +60,9 @@ public class ChainRestrictedPlayerController : MonoBehaviour
         {
             restrictedCameraAnimator.SetTrigger("TriggerShake2");
         }
-
-        if(count >= countToChainBreak)
-        {
-            PerformChainBreak();
-            //tmp just change controlls
-            ChangeControllsToPlayer();
-        }
     } 
+
+
     [Space(30)]
     [Header("Visuals")]
     [SerializeField] Animator restrictedCameraAnimator;
@@ -71,9 +76,13 @@ public class ChainRestrictedPlayerController : MonoBehaviour
 
     void PerformChainBreak()
     {
-       //Animate chain falling
-       //sound of a chain breaking
+       //Animate chain falling -- done
+       //sound of a chain breaking -- done
+
+       endOfRestrictedStageCutscene.Play();
     }
+
+    //calls by playable director
     void ChangeControllsToPlayer()
     {
         mainPlayer.SetActive(true);
